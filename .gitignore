@@ -221,3 +221,6 @@ __marimo__/
 
 .chroma
 
+.sqlite
+
+checkpoints.sqlite
