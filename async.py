@@ -26,7 +26,8 @@ class ReturnNodeName:
 
 
 builder = StateGraph(State)
-builder.add_node('a', ReturnNodeName("I'm A")) #b.c langgraph wants the node function to be callable, that's why we added __call__ to the class, to be able to call it's objects like a function
+builder.add_node('a', ReturnNodeName("I'm A")) #b.c langgraph wants the node function to be callable, that's why we added __call__ to the class, 
+# to be able to call it's objects like a function
 builder.add_edge(START, 'a')
 builder.add_node('b', ReturnNodeName("I'm B"))
 builder.add_node('c', ReturnNodeName("I'm C"))
