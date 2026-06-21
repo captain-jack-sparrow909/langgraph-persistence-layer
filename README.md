@@ -206,19 +206,3 @@ for event in graph.stream(initial_input, thread, stream_mode="values"):
 ```
 
 `"values"` was used so you can **see the full state** at each step — useful when building and testing the graph to confirm state is being updated correctly at every node.
-
-
-
-
--------------=--------
-
-
-
-
-This is a fan-in edge — e only starts when all nodes in the list have completed. It acts as a synchronization barrier.
-builder.add_edge(['b', 'c', 'd'], 'e') 
-
-but with these: e could start as soon as either of b, c, d is done; below could cause update error in race conditions
-builder.add_edge('b', 'e')
-builder.add_edge('c', 'e')
-builder.add_edge('d', 'e')
