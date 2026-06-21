@@ -42,5 +42,4 @@ graph= builder.compile()
 
 if __name__ == "__main__":
     graph.invoke(input={"aggregate": []}, config={"configurable": {"thread_id": "foo"}})
-    
 
